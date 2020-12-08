@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>FullApp2</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Page Remove="ExternalModules.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ExternalModules.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Prism.DryIoc" Version="8.0.0.1909" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FullApp2.Core\FullApp2.Core.csproj" />
+    <!--<ProjectReference Include="..\Modules\FullApp2.Modules.ModuleName\FullApp2.Modules.ModuleName.csproj" />-->
+    <ProjectReference Include="..\Services\FullApp2.Services.Interfaces\FullApp2.Services.Interfaces.csproj" />
+    <ProjectReference Include="..\Services\FullApp2.Services\FullApp2.Services.csproj" />
+  </ItemGroup>
+</Project>

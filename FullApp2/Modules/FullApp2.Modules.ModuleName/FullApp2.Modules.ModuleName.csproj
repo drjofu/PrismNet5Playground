@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>FullApp2.Modules.ModuleName</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Prism.Wpf" Version="8.0.0.1909" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\FullApp2.Core\FullApp2.Core.csproj" />
+    <ProjectReference Include="..\..\Services\FullApp2.Services.Interfaces\FullApp2.Services.Interfaces.csproj" />
+  </ItemGroup>
+</Project>
