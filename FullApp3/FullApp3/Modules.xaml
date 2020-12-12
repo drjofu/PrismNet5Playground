@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:mod="clr-namespace:FullApp3.Modularity;assembly=FullApp3">
+  <mod:ModuleList x:Key="m">
+      <mod:ModuleGroup BasePath="C:\Users\Joachim\source\repos\FullApp3\FullApp3\Modules\">
+          <mod:ModuleDefinition Path="FullApp3.Modules.ModuleName\bin\Debug\net5.0-windows\FullApp3.Modules.ModuleName.dll"/>
+          <mod:ModuleDefinition Path="Module2\bin\Debug\net5.0-windows\Module2.dll"/>
+      </mod:ModuleGroup>
+      <mod:ModuleGroup BasePath="C:\Users\Joachim\source\repos\FullApp3\FullApp3\Services">
+      <mod:ModuleDefinition Path="FullApp3.Services\bin\Debug\net5.0-windows\FullApp3.Services.dll"/>
+      </mod:ModuleGroup>
+  </mod:ModuleList>
+    
+</ResourceDictionary>

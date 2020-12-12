@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>FullApp3</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Page Remove="Modules.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Modules.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="5.0.0" />
+    <PackageReference Include="System.ComponentModel.Composition" Version="5.0.0" />
+    <PackageReference Include="System.Reactive" Version="5.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FullApp3.Core\FullApp3.Core.csproj" />
+    <!--<ProjectReference Include="..\Modules\FullApp3.Modules.ModuleName\FullApp3.Modules.ModuleName.csproj" />-->
+    <ProjectReference Include="..\Services\FullApp3.Services.Interfaces\FullApp3.Services.Interfaces.csproj" />
+  </ItemGroup>
+</Project>
